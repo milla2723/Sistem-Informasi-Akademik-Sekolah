@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="jadwalpelajaranguru.css" />
+  </head>
+  <body class="fade">
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar" id="sidebar">
+        <div class="logo">
+          <img src="logo_ht-removebg-preview.png" alt="Logo Sekolah" />
+          <div class="logo-text">
+            <h3>SMK HANG TUAH 1 JAKARTA</h3>
+            <p>SMK PUSAT KEUNGGULAN</p>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <a href="dashboardguru.html">
+              <i class="fa-solid fa-house-user"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="daftarsiswa.html">
+              <i class="fa-solid fa-users"></i>
+              <span>Daftar Siswa</span>
+            </a>
+          </li>
+          <li>
+            <a href="inputnilai.html"
+              ><i class="fa-solid fa-clipboard-list"></i>Input Nilai & Edit
+              Nilai</a
+            >
+          </li>
+          <li>
+            <a href="Jadwalpelajaranguru.html"
+              ><i class="fa-solid fa-calendar-alt"></i>Jadwal Pelajaran
+              Pribadi</a
+            >
+          </li>
+          <li>
+            <a href="pengumumanguru.html"
+              ><i class="fa-solid fa-bullhorn"></i>Pengumuman</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main">
+        <header class="top-header">
+          <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+          <h1>Jadwal Pelajaran</h1>
+          <a href="login.html" class="logout">LOGOUT</a>
+        </header>
+      </div>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("hidden");
+      }
+
+      document.querySelectorAll(".sidebar a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const href = this.getAttribute("href");
+
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 400);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: #000000;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.left h2 {
+  color: #578fca;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.left h3 {
+  color: #d70000;
+  font-size: 35px;
+}
+
+.right {
+  flex: 1;
+  background: #578fca;
+  color: white;
+  position: relative;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fa-xmark {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.fa-xmark:hover {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+
+.login-title {
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input,
+.login-form select {
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 20px;
+  outline: none;
+}
+
+.login-form button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #004c99;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #004c99;
+}
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 45px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #000000;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="%23666" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658A.5.5 0 0 1 2.87 5h10.26a.5.5 0 0 1 .418.658l-4.796 5.482a.5.5 0 0 1-.764 0z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px 20px;
+  cursor: pointer;
+}
+
+option {
+  padding: 0px;
+  font-size: 20px;
+  background-color: #fff;
+  color: #000;
+}
+
+option[disabled] {
+  color: #000000;
+}
+
+select:hover,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+select {
+  transition: border 0.3s ease;
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  top: 53%;
+  left: 270px;
+  font-size: 25px;
+  color: #666666;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.password-wrapper .toggle-password:hover {
+  color: #333333;
+  transform: scale(1.1);
+}

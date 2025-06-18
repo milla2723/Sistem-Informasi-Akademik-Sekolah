@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - SMK Hang Tuah 1 Jakarta</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img
+          src="logo ht.jpeg"
+          alt="Logo SMK Hang Tuah 1 Jakarta"
+          class="logo"
+        />
+        <h2>SMK HANG TUAH 1 JAKARTA</h2>
+        <h3>SMK PUSAT KEUNGGULAN</h3>
+      </div>
+      <div class="right">
+        <i
+          class="fa-solid fa-xmark"
+          onclick="window.location.href='index.html'"
+        ></i>
+        <h1 class="login-title">Login</h1>
+        <form class="login-form">
+          <input type="text" placeholder="NIP/NIS/ID" required />
+          <input type="text" placeholder="Username" required />
+          <div class="password-wrapper">
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              required
+            />
+            <i class="fa fa-eye-slash toggle-password" id="togglePassword"></i>
+          </div>
+
+          <select id="role" name="Role">
+            <option value="" disabled selected>Role</option>
+            <option value="admin">Admin</option>
+            <option value="guru">Guru</option>
+            <option value="siswa">Siswa</option>
+          </select>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const password = document.getElementById("password");
+
+      togglePassword.addEventListener("click", function () {
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+      });
+
+      const form = document.querySelector(".login-form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const role = document.getElementById("role").value.toLowerCase();
+
+        if (role === "admin") {
+          window.location.href = "dashboardadmin.html";
+        } else if (role === "guru") {
+          window.location.href = "dashboardguru.html";
+        } else if (role === "siswa") {
+          window.location.href = "dashboardsiswa.html";
+        } else {
+          alert("Role tidak dikenali!");
+        }
+      });
+    </script>
+  </body>
+</html>

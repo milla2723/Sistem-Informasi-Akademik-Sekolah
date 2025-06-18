@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOADING</title>
+    <link rel="stylesheet" href="loading.css" />
+  </head>
+  <body>
+    <img src="logo ht.jpeg" alt="Logo Yayasan Hang Tuah" class="logo" />
+    <div class="spinner"></div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const role = urlParams.get("role");
+
+      setTimeout(() => {
+        if (role === "admin") {
+          window.location.href = "dashboardadmin.html";
+        } else if (role === "guru") {
+          window.location.href = "dashboardguru.html";
+        } else if (role === "siswa") {
+          window.location.href = "dashboardsiswa.html";
+        } else {
+          alert("Role tidak dikenali!");
+          window.location.href = "index.html";
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>

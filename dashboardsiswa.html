@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dashboardsiswa.css" />
+  </head>
+  <body class="fade">
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar" id="sidebar">
+        <div class="logo">
+          <img src="logo_ht-removebg-preview.png" alt="Logo Sekolah" />
+          <div class="logo-text">
+            <h3>SMK HANG TUAH 1 JAKARTA</h3>
+            <p>SMK PUSAT KEUNGGULAN</p>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <a href="dashboardsiswa.html">
+              <i class="fa-solid fa-house-user"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="notifikasi.html">
+              <i class="fa-solid fa-bell"></i>
+              <span>Notifikasi</span>
+            </a>
+          </li>
+          <li>
+            <a href="ringkasannilai.html"
+              ><i class="fa-solid fa-clipboard"></i>Ringkasan Nilai</a
+            >
+          </li>
+          <li>
+            <a href="jadwalpelajaransiswa.html"
+              ><i class="fa-solid fa-calendar-days"></i>Jadwal Pelajaran</a
+            >
+          </li>
+          <li>
+            <a href="nilaimapelsiswa.html">
+              <i class="fa-solid fa-file-alt"></i>Nilai Mapel & Semester</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div class="main">
+        <header class="top-header">
+          <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+          <h1>Hallo, <b>Camilla Noor Azzahra</b></h1>
+          <a href="login.html" class="logout">LOGOUT</a>
+        </header>
+
+        <div class="image-container">
+          <img src="fotosekolah.jpeg" alt="SMK Hang Tuah 1" />
+        </div>
+        <div class="main-card">
+          <div class="card">
+            <p>
+              Ini adalah halaman utama Siswa. Silakan gunakan menu di sebelah
+              kiri untuk mengelola data akademik sekolah.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("hidden");
+      }
+
+      document.querySelectorAll(".sidebar a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const href = this.getAttribute("href");
+
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 400);
+        });
+      });
+    </script>
+  </body>
+</html>

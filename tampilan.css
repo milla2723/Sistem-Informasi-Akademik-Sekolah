@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.logo {
+  width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.judul-biru {
+  color: #578fca;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0;
+}
+
+.judul-merah {
+  color: #e0001b;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 10px 0 0;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 40px;
+}
